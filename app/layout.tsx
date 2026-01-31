@@ -81,9 +81,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LogisticsBusiness",
+    name: "Ocean Dew Logistics",
+    url: "https://oceandewlogistics.com",
+    description:
+      "Container import and freight forwarding services into Nigeria.",
+    areaServed: "Nigeria",
+    serviceType: [
+      "Container Import",
+      "Freight Forwarding",
+      "Ocean Freight",
+      "Customs Clearance",
+    ],
+  };
   return (
     <html lang="en">
-      <body className={` ${inter.className}   antialiased`}>{children}</body>
+      <body
+        className={` ${inter.className}   antialiased`}>
+         <script
+       type="application/ld+json"
+       dangerouslySetInnerHTML={{
+         __html: JSON.stringify(structuredData),
+       }}
+     />
+        {children}</body>
     </html>
   );
 }
