@@ -5,7 +5,7 @@ export default function Whatapp() {
   return (
     <div className="fixed bottom-22 md:bottom-10 right-1 z-50">
       <Link
-        href="https://wa.me/2347085647182"
+        href="https://wa.me/447879552393"
         target="_blank"
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:scale-110 transition"
       >

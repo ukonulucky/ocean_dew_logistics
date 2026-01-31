@@ -13,7 +13,7 @@ interface WorkProps {
 const data: WorkProps[] = [
   {
     id: 1,
-    image: "/Images/work-1.png",
+    image: "/Images/work-1.jpg",
     title: "70% Advance Payment",
     details: "Operations commence upon receipt of 70% advance payment",
   },
