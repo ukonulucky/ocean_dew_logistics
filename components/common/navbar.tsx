@@ -47,7 +47,7 @@ export default function Navbar({
         <div
           className={`flex items-center gap-2 font-semibold text-lg ${poppings.className}`}
         >
-          <div className="w-12.5 h-20">
+          <div className="w-[50px] h-[80px]">
           <Image
             alt="Ocean Dew Logistics logo"
             src={"/Images/logo-ocean-dew.png"}
