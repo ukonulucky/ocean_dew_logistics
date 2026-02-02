@@ -22,8 +22,6 @@ export const poppins = Poppins({
   weight: ["400", "500"],
 });
 
-
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://ocean-dew-logistics-qg3q.vercel.app"),
 
@@ -52,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Ocean Dew Logistics",
     images: [
       {
-        url: "/images/ship3.png",
+        url: "/images/seo-ocean-dew.png",
         width: 1200,
         height: 630,
         alt: "Container ship sailing with cargo containers",
@@ -67,7 +65,7 @@ export const metadata: Metadata = {
     title: "Ocean Dew Logistics",
     description:
       "Trusted container import and freight forwarding services into Nigeria.",
-    images: ["/images/ship3.png"],
+    images: ["/images/seo-ocean-dew.png"],
   },
 
   robots: {
