@@ -4,6 +4,7 @@ import { LogOut, Menu, Plane, X } from "lucide-react";
 import { NextFont } from "next/dist/compiled/@next/font";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar({
   poppings,
@@ -46,7 +47,12 @@ export default function Navbar({
         <div
           className={`flex items-center gap-2 font-semibold text-lg ${poppings.className}`}
         >
-          <Plane />
+          <Image
+            alt="Ocean Dew Logistics logo"
+            src={"/images/logo-ocean-dew.png"}
+            width={50}
+            height={80}
+          />
           <span>Oceandew</span>
           <span className="text-[#FF6B35]">Logistics</span>
         </div>
