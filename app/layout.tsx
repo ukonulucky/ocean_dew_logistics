@@ -24,9 +24,11 @@ export const poppins = Poppins({
 
 
 
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ocean-dew-logistics-qg3q.vercel.app"),
+
   title: "Ocean Dew Logistics | Container Import & Shipping Services to Nigeria",
+
   description:
     "Ocean Dew Logistics provides reliable container import, freight forwarding and international shipping services into Nigeria. Fast customs clearance and trusted global partners.",
 
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
     title: "Ocean Dew Logistics",
     description:
       "Secure and reliable container import services into Nigeria.",
-    url: "https://oceandewlogistics.com",
+    url: "https://ocean-dew-logistics-qg3q.vercel.app",
     siteName: "Ocean Dew Logistics",
     images: [
       {
@@ -72,8 +74,17 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-};
 
+  icons: {
+    icon: "/favicon.ico",
+  },
+
+  themeColor: "#0B3C5D",
+
+  alternates: {
+    canonical: "/",
+  },
+};
 
 
 export default function RootLayout({
