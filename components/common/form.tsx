@@ -4,6 +4,7 @@ import ReusableModal from "./reusableModal";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useAppContext } from "@/context/useAppContext";
 
 // Validation Schema
 export const quoteSchema = Yup.object({
@@ -34,13 +35,7 @@ export const quoteSchema = Yup.object({
   ),
   deliveryLocation: Yup.string().required("Delivery location is required"),
 });
-export default function FormQuote({
-  showForm,
-  setShowForm,
-}: {
-  showForm: boolean;
-  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+export default function FormQuote() {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -48,6 +43,8 @@ export default function FormQuote({
     service: "",
     message: "",
   });
+
+  const { showForm, setShowForm } = useAppContext();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -58,21 +55,21 @@ export default function FormQuote({
     }));
   };
 
-  const handleSubmit = async () => {
-    setLoading(true);
-    try {
-      // Your API call here
-      console.log("Form submitted:", formData);
+  // const handleSubmit = async () => {
+  //   setLoading(true);
+  //   try {
+  //     // Your API call here
+  //     console.log("Form submitted:", formData);
 
-      // Reset form and close modal
-      setFormData({ name: "", email: "", service: "", message: "" });
-      setShowForm(false);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     // Reset form and close modal
+  //     setFormData({ name: "", email: "", service: "", message: "" });
+  //     setShowForm(false);
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   return (
     <div className="bg-white relative overflow-hidden">

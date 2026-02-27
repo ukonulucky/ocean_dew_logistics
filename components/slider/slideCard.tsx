@@ -3,8 +3,11 @@ import { Ship } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import WaveDivider from "../common/wave";
+import { useAppContext } from "@/context/useAppContext";
+import Link from "next/link";
 
 function SlideCard({ id, imgUrl, link, alt }: sliderCardPropType) {
+  const { setShowForm, showForm } = useAppContext();
   return (
     <div className="block w-full relative">
       <div className=" w-full h-[535px] md:h-screen  overflow-hidden">
@@ -46,12 +49,17 @@ function SlideCard({ id, imgUrl, link, alt }: sliderCardPropType) {
             </div>
 
             <div className="flex items-center mt-5 space-x-5">
-              <Button className="bg-[#FF6B35] px-4.5 py-3 md:py-3.5 md:px-6">
+              <Button
+                onClick={() => setShowForm(true)}
+                className="bg-[#FF6B35] px-4.5 py-3 md:py-3.5 md:px-6"
+              >
                 Get quote
               </Button>
-              <Button className="bg-transparent px-4.5 py-3 md:py-3.5 md:px-6 border border-white">
-                Contact Us
-              </Button>
+              <Link href="#contact">
+                <Button className="bg-transparent px-4.5 py-3 md:py-3.5 md:px-6 border border-white">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

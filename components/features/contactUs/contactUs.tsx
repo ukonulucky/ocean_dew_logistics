@@ -10,7 +10,7 @@ interface ContactProps {
 const data: ContactProps[] = [
   {
     icon: <Phone />,
-    details: "07082524755",
+    details: "+44 7879 552393",
     type: "Phone",
   },
   {
@@ -20,7 +20,7 @@ const data: ContactProps[] = [
   },
   {
     icon: <Mail />,
-    details: "osasIfafa@gmail.com",
+    details: "admin@oceandewlogistics.com",
     type: "Email",
   },
   {

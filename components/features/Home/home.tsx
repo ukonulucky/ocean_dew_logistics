@@ -23,18 +23,12 @@ export default function Home({
   poppings: NextFont;
   inters: NextFont;
 }) {
-  const [showForm, setShowForm] = useState(false);
-
   return (
     <div
       className="bg-white relative overflow-hidden
     "
     >
-      <Navbar
-        poppings={poppings}
-        showForm={showForm}
-        setShowForm={setShowForm}
-      />
+      <Navbar poppings={poppings} />
       <Whatapp />
       <ScrollReveal>
         <MainHero />
@@ -61,7 +55,7 @@ export default function Home({
         <StayUpdated />
       </ScrollReveal>
 
-      <Form showForm={showForm} setShowForm={setShowForm} />
+      <Form />
 
       <Footer inter={inters} poppins={poppings} />
     </div>
