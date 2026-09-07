@@ -1,4 +1,5 @@
 import HeadingType from "@/components/common/headingType";
+import { button } from "framer-motion/client";
 import { Copy, Mail, Map, Phone } from "lucide-react";
 
 interface ContactProps {
@@ -32,6 +33,41 @@ const data: ContactProps[] = [
 ];
 
 export default function ContactUs() {
+  const requestQuotation = () => {
+    const companyEmail = "admin@oceandewlogistics.com";
+
+    const subject = "Shipping Quotation Request";
+
+    const body = `Dear Ocean Dew Logistics,
+  
+  I would like to request a quotation for shipping my cargo.
+  
+  Please find the shipment details below:
+  
+  Type of Goods:
+  Quantity/Weight:
+  Pickup/Origin Location:
+  Destination:
+  Preferred Shipping Method: Sea / Air
+  Expected Shipping Date:
+  
+  Please provide me with your available shipping options, estimated delivery time, and quotation.
+  
+  Thank you. I look forward to hearing from you.
+  
+  Kind regards,
+  [Your Name]
+  [Your Phone Number]`;
+
+    const gmailUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1` +
+      `&to=${encodeURIComponent(companyEmail)}` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailUrl, "_blank");
+  };
+
   return (
     <section id="contact" className="md:scroll-mt-24 py-16 mt-2 px-5">
       {/* Header */}
@@ -58,8 +94,12 @@ export default function ContactUs() {
                   {item.type}
                 </h3>
 
-                <span className="mt-1 block text-sm font-medium text-[#FF6B35]">
-                  {item.details}
+                <span className="mt-1  block text-sm font-medium text-[#FF6B35]">
+                  {item.type === "Email" ? (
+                    <button className="cursor-pointer" onClick={requestQuotation}>{item.details}</button>
+                  ) : (
+                    item.details
+                  )}
                 </span>
               </div>
             </div>
