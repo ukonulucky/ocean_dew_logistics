@@ -59,13 +59,9 @@ export default function ContactUs() {
   [Your Name]
   [Your Phone Number]`;
 
-    const gmailUrl =
-      `https://mail.google.com/mail/?view=cm&fs=1` +
-      `&to=${encodeURIComponent(companyEmail)}` +
-      `&su=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
-
-   window.open(gmailUrl, "_blank");
+    return `mailto:i${companyEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -96,9 +92,14 @@ export default function ContactUs() {
 
                 <span className="mt-1  block text-sm font-medium text-[#FF6B35]">
                   {item.type === "Email" ? (
-                    <button>
-                      <a className="cursor-pointer" target="_blank" onClick={requestQuotation}>{item.details}</a>
-                    </button>
+                    <a
+                      className="cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={requestQuotation()}
+                    >
+                      {item.details}
+                    </a>
                   ) : (
                     item.details
                   )}
