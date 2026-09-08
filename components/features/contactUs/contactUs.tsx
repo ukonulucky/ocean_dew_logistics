@@ -96,7 +96,9 @@ export default function ContactUs() {
 
                 <span className="mt-1  block text-sm font-medium text-[#FF6B35]">
                   {item.type === "Email" ? (
-                    <a className="cursor-pointer" target="_blank" onClick={requestQuotation}>{item.details}</a>
+                    <button>
+                      <a className="cursor-pointer" target="_blank" onClick={requestQuotation}>{item.details}</a>
+                    </button>
                   ) : (
                     item.details
                   )}
