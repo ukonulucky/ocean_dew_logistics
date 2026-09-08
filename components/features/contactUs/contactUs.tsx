@@ -59,7 +59,7 @@ export default function ContactUs() {
   [Your Name]
   [Your Phone Number]`;
 
-    return `mailto:i${companyEmail}?subject=${encodeURIComponent(
+    return `mailto:${companyEmail}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
   };
