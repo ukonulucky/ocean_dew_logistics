@@ -65,7 +65,7 @@ export default function ContactUs() {
       `&su=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(body)}`;
 
-  //  window.open(gmailUrl, "_blank");
+   window.open(gmailUrl, "_blank");
   };
 
   return (
