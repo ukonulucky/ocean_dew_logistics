@@ -65,7 +65,7 @@ export default function ContactUs() {
       `&su=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(body)}`;
 
-    window.open(gmailUrl, "_blank");
+  //  window.open(gmailUrl, "_blank");
   };
 
   return (
@@ -96,7 +96,7 @@ export default function ContactUs() {
 
                 <span className="mt-1  block text-sm font-medium text-[#FF6B35]">
                   {item.type === "Email" ? (
-                    <button className="cursor-pointer" onClick={requestQuotation}>{item.details}</button>
+                    <a className="cursor-pointer" target="_blank" onClick={requestQuotation}>{item.details}</a>
                   ) : (
                     item.details
                   )}
