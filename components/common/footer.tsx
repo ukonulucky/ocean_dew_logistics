@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Plane, X } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import Link from "next/link";
 import SubscribeForm from "./subscribeForm";
 import { NextFont } from "next/dist/compiled/@next/font";
@@ -29,19 +30,45 @@ export default function Footer({
           </div>
 
           <div className="flex items-center gap-3.5">
-            <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
-              <Facebook className="text-white h-[20.5px]" />
-            </div>
-            <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
-              <Linkedin className="text-white h-[20.5px]" />
-            </div>
-            <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
-              <X className="text-white h-[20.5px]" />
-            </div>
+            <a
+              href="https://www.facebook.com/share/1C9C3Rvs1f/?mibextid=wwXIfr"
+              target="_blank"
+            >
+              <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
+                <Facebook className="text-white h-[20.5px]" />
+              </div>
+            </a>
+            <a href="">
+              <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
+                <Linkedin className="text-white h-[20.5px]" />
+              </div>
+            </a>
+            <a
+              href="https://www.tiktok.com/@oceandew22logisticscargo?_r=1&_t=ZN-99ZOBtV9EYQ"
+              target="_blank"
+            >
+              <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
+                <FaTiktok
+                  className="
+                text-white h-[20.5px]
+                text-2xl hover:scale-110 transition-transform"
+                />
+              </div>
+            </a>
+            <a href="https://x.com/dave_ifean405?s=11" target="_blank">
+              <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
+                <X className="text-white h-[20.5px]" />
+              </div>
+            </a>
 
-            <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
-              <Instagram className="text-white h-[20.5px]" />
-            </div>
+            <a
+              href="https://www.instagram.com/oceandew_logistics?stkn=MTZwbGdnMGkzN3EwOA%3D%3D&utm_source=qr"
+              target="_blank"
+            >
+              <div className="p-4 bg-[#FF6B35] w-fit rounded-[8px]">
+                <Instagram className="text-white h-[20.5px]" />
+              </div>
+            </a>
           </div>
         </div>
 
